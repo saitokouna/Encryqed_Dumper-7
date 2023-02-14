@@ -7,8 +7,8 @@ Generator::MemberMap Generator::PredefinedMembers;
 
 void Generator::Init()
 {
-	ObjectArray::Init();
-	FName::Init();
+	//ObjectArray::Init();
+	//FName::Init();
 
 	/* manual overwrite */
 	//ObjectArray::Init(/*GObjects*/, /*ChunkSize*/, /*bIsChunked*/);
@@ -19,8 +19,13 @@ void Generator::Init()
 	//FName::Init(0x211AF50);
 	//Off::InSDK::InitPE(0x43);
 
+	/* EpicGames Store*/
+	FName::Init(0x39EBE0);
+	ObjectArray::Init(0x1F29978, 0x1000, true);
+	Off::InSDK::InitPE(0x3F);
+
 	Off::Init();
-	Off::InSDK::InitPE();
+	//Off::InSDK::InitPE();
 
 	InitPredefinedMembers();
 	InitPredefinedFunctions();

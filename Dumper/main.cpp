@@ -32,6 +32,9 @@ DWORD MainThread(HMODULE Module)
 
 	Generator::Init();
 
+	Settings::GameName = "EpicGames Store";
+	Settings::GameVersion = "EpicGamesLauncher-7";
+
 	if (Settings::GameName.empty() && Settings::GameVersion.empty())
 	{
 		//Only Possible in Main()

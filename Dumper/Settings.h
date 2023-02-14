@@ -1,7 +1,7 @@
 #pragma once
 
 
-//#define WITH_CASE_PRESERVING_NAME
+#define WITH_CASE_PRESERVING_NAME
 
 namespace Settings
 {
